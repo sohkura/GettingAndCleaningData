@@ -13,101 +13,299 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
 For more information about this dataset contact: activityrecognition@smartlab.ws
 
-### Variables/Columns 
+### Variable Names and Descriptions
 
-**Subject**
+Variable names and their short descriptions are described. Except first 2 variables *Subject* and *Activity*, the following nameing convention is used for the variable names: 
 
-This is the numbers from 1 to 30 that represents poeple who particiated the measurements.
-
-**Activity** 
-
-This represents the activiteis measured for each people. The following 6 activites are measured: 
-
-1. WALKING
-2. WALKING_UPSTAIRS
-3. WALKING_DOWNSTAIRS
-4. SITTING
-5. STANDING
-6. LAYING
-
-**Summary of Features Measured**  
-
-The followig shows a list of 66 variables measured. The **mean** in the variable name, e.g., tBodyAcc.mean...X, indicates the mean() of the measurements and the **std** in the variable name indicates the std() or standard deviaiton of the measurements. 
-
+* t: Time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. 
+* f: Fast Fourier Transform (FFT) (prefix 'f" to donate fast fourier transform")
 * Body: Data/signal obtained from body
 * Acc: Data from accelerometer, unit is standard gravity units 'g'
 * Gravity: Data/signal obtained from grabity, 
-* Jerk: Derived data obtained from body linear accelerationand angular velocity 
+* Jerk: Derived data obtained from body linear acceleration and angular velocity 
 * Gyro: Data from gyroscope, unit is radians/second
-* Mag: Magniure calcuated using the Euclidean norm
+* Mag: Magnitude calcuated using the Euclidean norm
 * X: X axis direction movement
 * Y: Y axis direction movement
 * Z: Z axis direciton movement 
+* mean: Mean value
+* std: Standard Deviation 
 
- 
-tBodyAcc.mean...X       (unit: standard gravity units 'g')        
-tBodyAcc.mean...Y       (unit: standard gravity units 'g')      
-tBodyAcc.mean...Z       (unit: standard gravity units 'g')           
-tBodyAcc.std...X        (unit: standard gravity units 'g')       
-tBodyAcc.std...Y        (unit: standard gravity units 'g')       
-tBodyAcc.std...Z        (unit: standard gravity units 'g')      
-tGravityAcc.mean...X    (unit: standard gravity units 'g')     
-tGravityAcc.mean...Y    (unit: standard gravity units 'g')    
-tGravityAcc.mean...Z    (unit: standard gravity units 'g')   
-tGravityAcc.std...X     (unit: standard gravity units 'g')      
-tGravityAcc.std...Y     (unit: standard gravity units 'g')      
-tGravityAcc.std...Z     (unit: standard gravity units 'g')     
-tBodyAccJerk.mean...X   (unit: standard gravity units 'g')  
-tBodyAccJerk.mean...Y   (unit: standard gravity units 'g')  
-tBodyAccJerk.mean...Z   (unit: standard gravity units 'g')  
-tBodyAccJerk.std...X    (unit: standard gravity units 'g')      
-tBodyAccJerk.std...Y    (unit: standard gravity units 'g')     
-tBodyAccJerk.std...Z    (unit: standard gravity units 'g')       
-tBodyGyro.mean...X      (unit: radians/second)    
-tBodyGyro.mean...Y      (unit: radians/second)         
-tBodyGyro.mean...Z      (unit: radians/second)          
-tBodyGyro.std...X       (unit: radians/second)      
-tBodyGyro.std...Y       (unit: radians/second)      
-tBodyGyro.std...Z       (unit: radians/second)       
-tBodyGyroJerk.mean...X  (unit: radians/second)  
-tBodyGyroJerk.mean...Y  (unit: radians/second)   
-tBodyGyroJerk.mean...Z  (unit: radians/second)     
-tBodyGyroJerk.std...X   (unit: radians/second)    
-tBodyGyroJerk.std...Y   (unit: radians/second)   
-tBodyGyroJerk.std...Z   (unit: radians/second)       
-tBodyAccMag.mean..      (unit: standard gravity units 'g')      
-tBodyAccMag.std..       (unit: standard gravity units 'g')  
-tGravityAccMag.mean..   (unit: standard gravity units 'g')  
-tGravityAccMag.std..    (unit: standard gravity units 'g')      
-tBodyAccJerkMag.mean..  (unit: standard gravity units 'g')     
-tBodyAccJerkMag.std..   (unit: standard gravity units 'g')     
-tBodyGyroMag.mean..     (unit: radians/second)  
-tBodyGyroMag.std..      (unit: radians/second)      
-tBodyGyroJerkMag.mean.. (unit: radians/second)      
-tBodyGyroJerkMag.std..  (unit: radians/second)   
-fBodyAcc.mean...X       (unit: standard gravity units 'g')           
-fBodyAcc.mean...Y       (unit: standard gravity units 'g')          
-fBodyAcc.mean...Z       (unit: standard gravity units 'g')         
-fBodyAcc.std...X        (unit: standard gravity units 'g')       
-fBodyAcc.std...Y        (unit: standard gravity units 'g')       
-fBodyAcc.std...Z        (unIt: standard gravity units 'g')      
-fBodyAccJerk.mean...X   (unit: standard gravity units 'g')    
-fBodyAccJerk.mean...Y   (unit: standard gravity units 'g')       
-fBodyAccJerk.mean...Z   (unit: standard gravity units 'g')       
-fBodyAccJerk.std...X    (unit: standard gravity units 'g')      
-fBodyAccJerk.std...Y    (unit: standard gravity units 'g')       
-fBodyAccJerk.std...Z    (unit: standard gravity units 'g')       
-fBodyGyro.mean...X      (unit: radians/second)       
-fBodyGyro.mean...Y      (unit: radians/second)     
-fBodyGyro.mean...Z      (unit: radians/second)      
-fBodyGyro.std...X       (unit: radians/second)     
-fBodyGyro.std...Y       (unit: radians/second)    
-fBodyGyro.std...Z       (unit: radians/second)     
-fBodyAccMag.mean..      (unit: standard gravity units 'g')        
-fBodyAccMag.std..       (unit: standard gravity units 'g')         
-fBodyBodyAccJerkMag.mean..  (unit: standard gravity units 'g')  
-fBodyBodyAccJerkMag.std..   (unit: standard gravity units 'g')  
-fBodyBodyGyroMag.mean..     (unit: radians/second)    
-fBodyBodyGyroMag.std..      (unit: radians/second)  
-fBodyBodyGyroJerkMag.mean.. (unit: radians/second)   
-fBodyBodyGyroJerkMag.std..  (unit: radians/second) 
+*Subject*:
+
+    This is the numbers from 1 to 30 that represents poeple who particiated the measurements.
+
+*Activity*: 
+
+    This represents the activiteis measured for each people. The following 6 activites are measured: 
+
+    1. WALKING
+    2. WALKING_UPSTAIRS
+    3. WALKING_DOWNSTAIRS
+    4. SITTING
+    5. STANDING
+    6. LAYING
+
+*tBodyAcc.mean...X*:       (unit: standard gravity units 'g') 
+
+    This represents the mean of the accelerometer measurment for X direction obtaiend from body.
+
+*tBodyAcc.mean...Y*:       (unit: standard gravity units 'g')  
+
+    This represents the mean of the accelerometer measurment for Y direction obtaiend from body.
+
+*tBodyAcc.mean...Z":"       (unit: standard gravity units 'g')      
+
+    This represents the mean of the accelerometer measurment for Z direction obtaiend from body.
+
+*tBodyAcc.std...X*:        (unit: standard gravity units 'g') 
+
+    This represents the standard deviaiton of the accelerometer measurment for X direction obtaiend from body.
+
+*tBodyAcc.std...Y*:        (unit: standard gravity units 'g') 
+
+    This represents the standard deviaiton of the accelerometer measurment for Y direction obtaiend from body.
+
+*tBodyAcc.std...Z*:        (unit: standard gravity units 'g')  
+    
+    This represents the standard deviaiton of the accelerometer measurment for Z direction obtaiend from body.
+
+*tGravityAcc.mean...X*:    (unit: standard gravity units 'g') 
+
+    This represents the mean of the accelerometer measurment for X direction obtaiend from gravity.
+
+*tGravityAcc.mean...Y*:    (unit: standard gravity units 'g')  
+
+    This represents the mean of the accelerometer measurment for Y direction obtaiend from gravity.
+
+*tGravityAcc.mean...Z*:    (unit: standard gravity units 'g')  
+
+    This represents the mean of the accelerometer measurment for Z direction obtaiend from gravity.
+
+*tGravityAcc.std...X*:     (unit: standard gravity units 'g')    
+
+    This represents the standard deviation of the accelerometer measurment for X direction obtaiend from gravity.
+
+*tGravityAcc.std...Y*:     (unit: standard gravity units 'g') 
+
+    This represents the standard deviation of the accelerometer measurment for Y direction obtaiend from gravity.
+
+*tGravityAcc.std...Z*:     (unit: standard gravity units 'g')   
+
+    This represents the standard deviation of the accelerometer measurment for Z direction obtaiend from gravity.
+
+*tBodyAccJerk.mean...X*:   (unit: standard gravity units 'g')  
+
+    This represents the mean of the measurement for X direction derived from liner acceleration and angular velocity from body.
+
+*tBodyAccJerk.mean...Y*:   (unit: standard gravity units 'g') 
+
+    This represents the mean of the measurement for Y direction derived from liner acceleration and angular velocity from body.
+
+*tBodyAccJerk.mean...Z*:   (unit: standard gravity units 'g')  
+
+    This represents the mean of the measurement for Z direction derived from liner acceleration and angular velocity from body.
+
+*tBodyAccJerk.std...X*:    (unit: standard gravity units 'g') 
+
+    This represents the standard deviation of the measurement for X direction derived from liner acceleration and angular velocity from body.
+
+*tBodyAccJerk.std...Y*:    (unit: standard gravity units 'g') 
+
+    This represents the standard deviation of the measurement for Y direction derived from liner acceleration and angular velocity from body.
+
+*tBodyAccJerk.std...Z*:    (unit: standard gravity units 'g') 
+
+    This represents the standard deviation of the measurement for Z direction derived from liner acceleration and angular velocity from body.
+
+*tBodyGyro.mean...X*:      (unit: radians/second) 
+
+    This represents the mean of the measurement of the gyroscope for X direction from body.
+
+*tBodyGyro.mean...Y*:      (unit: radians/second)  
+
+    This represents the mean of the measurement of the gyroscope for Y direction from body.
+
+*tBodyGyro.mean...Z*:      (unit: radians/second)      
+
+    This represents the mean of the measurement of the gyroscope for Z direction from body.
+
+*tBodyGyro.std...X*:       (unit: radians/second)  
+
+    This represents the standard deviation of the measurement of the gyroscope for X direction from body.
+
+*tBodyGyro.std...Y*:       (unit: radians/second) 
+
+    This represents the standard deviation of the measurement of the gyroscope for Y direction from body.
+
+*tBodyGyro.std...Z*:       (unit: radians/second)  
+
+    This represents the standard deviation of the measurement of the gyroscope for Z direction from body.
+
+*tBodyGyroJerk.mean...X*:  (unit: radians/second)  
+
+    This represents the mean of the measurement for X direction derived from gyroscope and angular velocity from body.
+
+*tBodyGyroJerk.mean...Y*:  (unit: radians/second)  
+
+    This represents the mean of the measurement for Y direction derived from gyroscope and angular velocity from body.
+
+*tBodyGyroJerk.mean...Z*:  (unit: radians/second)   
+
+    This represents the mean of the measurement for Z direction derived from gyroscope and angular velocity from body.
+
+*tBodyGyroJerk.std...X*:   (unit: radians/second)   
+
+    This represents the standard deviation of the measurement for X direction derived from gyroscope and angular velocity from body.
+
+*tBodyGyroJerk.std...Y*:   (unit: radians/second)   
+
+    This represents the standard deviation of the measurement for Y direction derived from gyroscope and angular velocity from body.
+
+*tBodyGyroJerk.std...Z*:   (unit: radians/second)   
+
+    This represents the standard deviation of the measurement for Z direction derived from gyroscope and angular velocity from body.
+
+*tBodyAccMag.mean..*:      (unit: standard gravity units 'g')    
+
+    This represents the mean of the magnitude calculated from accelerometer from body.
+
+*tBodyAccMag.std..*:       (unit: standard gravity units 'g')  
+
+    This represents the standard deviaiton of the magnitude calculated from accelerometer from body.
+
+*tGravityAccMag.mean..*:   (unit: standard gravity units 'g')  
+
+    This represents the mean of the magnitude calculated from gravity, accelerometer.
+
+*tGravityAccMag.std..*:    (unit: standard gravity units 'g')   
+
+    This represents the standard deviation the magnitude calculated from gravity, accelerometer.
+
+*tBodyAccJerkMag.mean..*:  (unit: standard gravity units 'g')  
+
+    This represents the mean of the the magnitude calculated from accelermeter and angular velocity from body.
+
+*tBodyAccJerkMag.std..*:   (unit: standard gravity units 'g')   
+
+    This represents the standard deviation of the the magnitude calculated from accelermeter and angular velocity from body.
+
+*tBodyGyroMag.mean..*:     (unit: radians/second)  
+
+    This represents the mean of the magnitude calcualted from gyroscope from body.
+
+*tBodyGyroMag.std..*:      (unit: radians/second)   
+
+    This represents the standrd deviation of the magnitude calcualted from gyroscope from body.
+
+*tBodyGyroJerkMag.mean..*: (unit: radians/second)  
+
+    This represents the mean of the magnitude calcualted from gyroscope and angular velocity from body.
+
+*tBodyGyroJerkMag.std..*:  (unit: radians/second)   
+
+    This represents the standard deviation of the magnitude calcualted from gyroscope and angular velocity from body.
+
+*fBodyAcc.mean...X*:       (unit: standard gravity units 'g')     
+
+    This represents the mean of the accelerometer measurment that was applied FFT for X direction obtaiend from body.
+
+*fBodyAcc.mean...Y*:       (unit: standard gravity units 'g')  
+
+    This represents the mean of the accelerometer measurment that was applied FFT for Y direction obtaiend from body.
+
+*fBodyAcc.mean...Z*:       (unit: standard gravity units 'g') 
+
+    This represents the mean of the accelerometer measurment that was applied FFT for Z direction obtaiend from body.
+
+*fBodyAcc.std...X*:        (unit: standard gravity units 'g')   
+
+    This represents the standard deviaiton of the accelerometer measurment that was applied FFT for X direction obtaiend from body.
+
+*fBodyAcc.std...Y*:        (unit: standard gravity units 'g')   
+
+    This represents the standard deviaiton of the accelerometer measurment that was applied FFT for Y direction obtaiend from body.
+
+*fBodyAcc.std...Z*:        (unIt: standard gravity units 'g')      
+
+    This represents the standard deviaiton of the accelerometer measurment that was applied FFT for Z direction obtaiend from body.
+
+*fBodyAccJerk.mean...X*:   (unit: standard gravity units 'g')    
+
+    This represents the mean of the measurement that was applied FFT for X direction derived from liner acceleration and angular velocity from body.
+
+*fBodyAccJerk.mean...Y*:   (unit: standard gravity units 'g')      
+
+    This represents the mean of the measurement that was applied FFT for Y direction derived from liner acceleration and angular velocity from body.
+
+*fBodyAccJerk.mean...Z*:   (unit: standard gravity units 'g')      
+
+    This represents the mean of the measurement that was applied FFT for Z direction derived from liner acceleration and angular velocity from body.
+
+*fBodyAccJerk.std...X*:    (unit: standard gravity units 'g')      
+
+    This represents the standard deviation of the measurement that was applied FFT for X direction derived from liner acceleration and angular velocity from body.
+
+*fBodyAccJerk.std...Y*:    (unit: standard gravity units 'g')    
+
+    This represents the standard deviation of the measurement that was applied FFT for Y direction derived from liner acceleration and angular velocity from body.
+
+*fBodyAccJerk.std...Z*:    (unit: standard gravity units 'g')    
+
+    This represents the standard deviation of the measurement that was applied FFT for Z direction derived from liner acceleration and angular velocity from body.
+
+*fBodyGyro.mean...X*:      (unit: radians/second)      
+
+    This represents the mean of the measurement of the gyroscope that was applied FFT for X direction from body.
+
+*fBodyGyro.mean...Y*:      (unit: radians/second)  
+
+    This represents the mean of the measurement of the gyroscope that was applied FFT for Y direction from body.
+
+*fBodyGyro.mean...Z*:      (unit: radians/second)      
+
+    This represents the mean of the measurement of the gyroscope that was applied FFT for Z direction from body.
+
+*fBodyGyro.std...X*:       (unit: radians/second)  
+
+    This represents the standard deviation of the measurement of the gyroscope that was applied FFT for X direction from body.
+
+*fBodyGyro.std...Y*:       (unit: radians/second)    
+
+    This represents the standard deviation of the measurement of the gyroscope that was applied FFT for Y direction from body.
+
+*fBodyGyro.std...Z*:       (unit: radians/second) 
+
+    This represents the standard deviation of the measurement of the gyroscope that was applied FFT for Y direction from body.
+
+*fBodyAccMag.mean..*:      (unit: standard gravity units 'g')  
+
+    This represents the mean of the magnitude that was applied FFT calcualted from gyroscope from body.
+
+*fBodyAccMag.std..*:       (unit: standard gravity units 'g')   
+
+    This represents the standard deviation of the magnitude that was applied FFT calcualted from gyroscope from body.
+
+*fBodyBodyAccJerkMag.mean..*:  (unit: standard gravity units 'g')  
+
+    This represents the mean of the the magnitude that was applied FFT from accelermeter and angular velocity from body.
+
+*fBodyBodyAccJerkMag.std..*:   (unit: standard gravity units 'g')  
+
+    This represents the standard deviation of the the magnitude that was applied FFT from accelermeter and angular velocity from body.
+
+*fBodyBodyGyroMag.mean..*:     (unit: radians/second)    
+
+    This represent the mean of the magnitude applied FFT from gyroscope from body.
+
+*fBodyBodyGyroMag.std..*:      (unit: radians/second)  
+
+    This represent the standard deviation of the magnitude applied FFT from gyroscope from body.
+
+*fBodyBodyGyroJerkMag.mean..*: (unit: radians/second)   
+
+    This represent the mean of the magnitude applied FFT from gyroscope and jerk signal from body.
+
+*fBodyBodyGyroJerkMag.std..*:  (unit: radians/second) 
+
+    This represent the standard deviation of the magnitude applied FFT from gyroscope and jerk signal from body.
